@@ -35,7 +35,7 @@ const CartModal = () => {
       </div>
 
       <div className="flex flex-col gap-3">
-        <div className="flex justify-between   font-bold">
+        <div className="flex justify-between font-bold">
           <div className="">Subtotal</div>
           <div>$40.5</div>
         </div>
@@ -47,10 +47,10 @@ const CartModal = () => {
 
         {/* Buttons */}
         <div className="flex justify-between text-sm">
-          <button className="p-4 px-5 ring-1 ring-gray-400   rounded-lg">
+          <button className="p-4 px-5 ring-1 ring-gray-400 rounded-lg">
             View Cart
           </button>
-          <button className="bg-slate-800 p-4 px-5 text-white   rounded-lg">
+          <button className="bg-slate-800 p-4 px-5 text-white rounded-lg">
             Check out
           </button>
         </div>
