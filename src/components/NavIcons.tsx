@@ -44,7 +44,7 @@ const NavIcons = () => {
         {isCartOpen && (
           <div
             onClick={() => setIsCartOpen(false)}
-            className="absolute right-0 top-10 flex flex-col gap-2 bg-white p-4 rounded-md shadow-md"
+            className="absolute right-0 top-10 flex flex-col gap-2 bg-white p-4 rounded-md shadow-md z-20"
           >
             <CartModal />
           </div>
