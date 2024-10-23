@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="mt-52 px-4 py-16 md:px-8 lg:px-16 xl:px-32 2xl:px-64 bg-gray-50">
+    <div className="mt-14 px-4 py-16 md:px-8 lg:px-16 xl:px-32 2xl:px-64 bg-gray-50">
       <div className="flex h-fit p-4 flex-col items-stretch md:flex-row justify-between gap-20 md:gap-8">
         {/* LEFT SECTION */}
         <div className="flex flex-col justify-between gap-6 md:w-1/3 w-full">
