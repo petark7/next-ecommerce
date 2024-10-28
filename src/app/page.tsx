@@ -16,10 +16,10 @@ const HomePage = async () => {
   //   getProducts();
   // }, [wixClient]);
 
-  const wixClient = await wixClientServer();
-  const res = await wixClient.products.queryProducts().find();
+  // const wixClient = await wixClientServer();
+  // const res = await wixClient.products.queryProducts().find();
 
-  console.log(res);
+  // console.log(res);
 
   return (
     <div className="">

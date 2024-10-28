@@ -14,7 +14,6 @@ const ProductList = async ({
   limit?: number;
 }) => {
   const wixClient = await wixClientServer();
-
   const res = await wixClient.products
     .queryProducts()
     .eq("collectionIds", categoryId)
