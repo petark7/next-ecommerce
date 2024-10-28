@@ -17,22 +17,20 @@ const CategoryList = async () => {
           return (
             <Link
               key={category._id}
-              className="w-[270px] flex-shrink-0"
+              className="w-[300px] flex-shrink-0"
               href={`/list?cat=${category.slug}`}
             >
               <div className="flex flex-col gap-4 ">
-                <div className="relative bg-slate-100 w-full h-[270px] ">
+                <div className="relative bg-slate-100 w-full h-[370px] ">
                   <Image
-                    className="rounded-xl object-cover"
+                    className="object-cover"
                     fill
                     alt="Product"
                     src={category.media?.mainMedia?.image?.url || "cat.png"}
                   />
                 </div>
 
-                <h1 className="tracking-wide text-xl font-light ">
-                  {category.name}
-                </h1>
+                <h1 className="tracking-wide ">{category.name}</h1>
               </div>
             </Link>
           );
