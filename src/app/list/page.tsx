@@ -1,6 +1,7 @@
 import React from "react";
 import Filter from "@/components/Filter";
 import ButtonBanner from "@/components/ButtonBanner";
+import ProductList from "@/components/ProductList";
 
 const ListPage = ({ searchParams }: { searchParams: any }) => {
   return (
@@ -13,7 +14,7 @@ const ListPage = ({ searchParams }: { searchParams: any }) => {
       <div className="capitalize text-xl font-semibold mb-12 ">
         {searchParams.cat} For You!
       </div>
-      <div>Products go here</div>
+      <ProductList categoryId="22172118-b003-66f4-6c05-69b1cf7297ea" />
     </div>
   );
 };
