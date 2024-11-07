@@ -13,11 +13,11 @@ const Filter = () => {
   ) => {
     const { name, value } = event.target;
     const params = new URLSearchParams(searchParams.toString());
+
     params.set(name, value);
-    console.log(pathname);
     replace(`${pathname}?${params.toString()}`);
   };
-
+  // TODO: make custom SELECT & INPUT components to simplify code here
   return (
     <div className="flex flex-col gap-6 md:flex-row justify-between items-center">
       <div className="flex gap-3 items-center flex-wrap">
