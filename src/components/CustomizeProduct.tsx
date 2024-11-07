@@ -1,43 +1,26 @@
 import React from "react";
 
-const CustomizeProduct = () => {
+const CustomizeProduct = ({ productOptions }: { productOptions: any }) => {
   return (
     <div className="flex flex-col gap-5">
-      {/* PRICING */}
-      <div className="font-semibold text-2xl">
-        <span className="text-xl text-gray-400 line-through pr-4">$45</span>
-        $40
-      </div>
-
       {/* COLORS */}
-      <div className="flex flex-col gap-3">
-        <h4 className="font-semibold text-sm">Choose a Color</h4>
-        <div className="flex gap-2">
-          {/* SELECTED: */}
-          <div className="flex items-center justify-center bg-white ring ring-red-300 rounded-full p-[3px]">
-            <button className="bg-black p-4 rounded-full ring-1 ring-gray-300" />
+      {productOptions.map((option: any) => {
+        return (
+          <div key={option.optionType} className="flex gap-3">
+            {option?.choices?.map((choice: any, index: any) => {
+              return (
+                <div key={index}>
+                  <div className="flex items-center justify-center bg-white rounded-full p-[3px]">
+                    <button
+                      className={`bg-red-400 p-4 rounded-full ring-1 ring-gray-300`}
+                    />
+                  </div>
+                </div>
+              );
+            })}
           </div>
-
-          <div className="flex items-center justify-center bg-white rounded-full p-[3px]">
-            <button className="bg-red-400 p-4 rounded-full ring-1 ring-gray-300" />
-          </div>
-
-          <div className="relative cursor-pointer">
-            {/* <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-red-400 h-[2px] w-full rotate-45"></div>
-            </div> */}
-            <button className="bg-green-400 ring-1 ring-gray-300 p-4 rounded-full" />
-          </div>
-
-          {/* DISABLED: */}
-          <div className="relative cursor-not-allowed">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-red-400 h-[2px] w-full rotate-45"></div>
-            </div>
-            <button className="bg-white ring-1 ring-gray-300 p-4 rounded-full" />
-          </div>
-        </div>
-      </div>
+        );
+      })}
 
       {/* SIZES */}
       <div className="flex flex-col gap-6">
