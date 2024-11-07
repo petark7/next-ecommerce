@@ -15,12 +15,14 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
     <div className="flex flex-col gap-6 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
       {/* TOP BANNER WITH BUTTON */}
       <ButtonBanner />
+
       {/* FILTER AND SORTING */}
       <Filter />
 
-      <div className="capitalize text-xl font-semibold mb-12 ">
+      <div className="capitalize text-2xl font-semibold my-3 ">
         {searchParams.cat} For You!
       </div>
+
       <ProductList
         categoryId={
           cat.collection?._id || "00000000-000000-000000-000000000001"

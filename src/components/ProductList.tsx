@@ -17,7 +17,7 @@ const ProductList = async ({
 }) => {
   const wixClient = await wixClientServer();
 
-  const productQuery = wixClient.products
+  let productQuery = wixClient.products
     .queryProducts()
     .limit(limit || PRODUCTS_PER_PAGE)
     .startsWith("name", searchParams?.name || "")
@@ -30,11 +30,11 @@ const ProductList = async ({
     const [sortType, sortBy] = searchParams.sort.split(" ");
 
     if (sortType === "asc") {
-      productQuery.ascending(sortBy);
+      productQuery = productQuery.ascending(sortBy);
     }
 
     if (sortType === "desc") {
-      productQuery.descending(sortBy);
+      productQuery = productQuery.descending(sortBy);
     }
   }
 
