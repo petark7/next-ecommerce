@@ -16,6 +16,7 @@ const ProductList = async ({
   searchParams?: any;
 }) => {
   const wixClient = await wixClientServer();
+
   const productQuery = wixClient.products
     .queryProducts()
     .limit(limit || PRODUCTS_PER_PAGE)
@@ -26,8 +27,7 @@ const ProductList = async ({
     .eq("collectionIds", categoryId);
 
   if (searchParams?.sort) {
-    const [sortType, sortBy] = searchParams?.sort.split(" ");
-    console.log(sortType, sortBy);
+    const [sortType, sortBy] = searchParams.sort.split(" ");
 
     if (sortType === "asc") {
       productQuery.ascending(sortBy);

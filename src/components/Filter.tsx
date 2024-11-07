@@ -76,7 +76,7 @@ const Filter = () => {
       <div className="w-full md:w-fit">
         <select
           className="text-sm ring-1 ring-gray-300 bg-gray-200 bg-transparent p-2 w-32 rounded-full"
-          name="sortBy"
+          name="sort"
           onChange={handleFilterChange}
         >
           <option value="">Sort by</option>
