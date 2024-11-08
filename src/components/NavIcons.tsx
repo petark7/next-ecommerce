@@ -47,14 +47,6 @@ const NavIcons = () => {
           </div>
         )}
       </div>
-
-      <Image
-        className="cursor-pointer"
-        src={"/notification.png"}
-        alt="notification"
-        width={22}
-        height={22}
-      />
     </div>
   );
 };
